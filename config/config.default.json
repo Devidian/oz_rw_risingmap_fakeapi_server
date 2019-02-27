@@ -1,0 +1,24 @@
+{
+    "log": {
+        "info": true,
+        "debug": true,
+        "warn": true
+    },
+    "cli": {
+        "commands": [
+            "REBOOT"
+        ]
+    },
+    "app": {
+        "title": "RM-FakeServer"
+    },
+    "map": {
+        "root": "",
+        "id": ""
+    },
+    "websocket": {
+        "host": "localhost",
+        "port": 21337,
+        "uplink": "ws://localhost:21338/"
+    }
+}
