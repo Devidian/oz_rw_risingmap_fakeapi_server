@@ -1,5 +1,5 @@
 {
-	"name": "oz-rw-risingmap-fakeapi-server",
+	"name": "oz_rw_risingmap_fakeapi_server",
 	"version": "0.1.0",
 	"scripts": {
 		"start": "node bin/main"

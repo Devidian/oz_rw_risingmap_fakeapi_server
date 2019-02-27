@@ -1,0 +1,18 @@
+[Unit]
+Description=RisingWorld FakeAPI Server for RisingMap
+
+[Service]
+# Maybe this must be executed by root once, seems to be persistent on reboot
+# ExecStartPre=/sbin/setcap 'cap_net_bind_service=+ep' /usr/bin/nodejs
+ExecStart=/usr/bin/nodejs /srv/apps/oz_rw_risingmap_fakeapi_server/bin/main.js
+# ExecReload=/usr/bin/nodejs /srv/apps/oz_rw_risingmap_fakeapi_server/bin/app-cli.js REBOOT
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=RWFAS
+User=nodejs
+Group=nodejs
+Environment=NODE_ENV=production
+
+[Install]
+WantedBy=multi-user.target
